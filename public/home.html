@@ -5,6 +5,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,14 +35,14 @@
   <div class="col xl4 l4 m4 s12" id="searchPanel">
     <div class="card-panel">
       <form>
-        <h4>Neighborhood Search</h4>
+        <h4 style="float: left;" "max-width: 150px;">Neighborhood Search</h4>
 
 
         <!--PRACTICE SELECTOR==================================================-->
         <div class="input-field col s12">
           <select id="practices">
             <option value="" ></option>
-            <option value="emergency">Emergency Response</option>
+            <!-- <option value="emergency">Emergency Response</option> -->
             <option value="crime">Crime Rate</option>
             <option value="offenders">Sex Offenders</option>
           </select>
@@ -59,18 +61,57 @@
     </div>
   </div>
 
+
   <div class="col l8 m8 s12" id="resultsTable">
+    <h3 container class="jumbotron" style="text-center;">Crime Rate</h3>
     <div class="card-panel white">						
       <table class="responsive-table highlight">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Phone</th>
-            <th>Address</th>
+            <th>Crime</th>
+            <th>Location</th>
+            <th>Offender</th>
+            <th>Percentage</th>
           </tr>
         </thead>
 
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="col l8 m8 s12" id="resultsTable">
+    <h3 container class="jumbotron" style="text-center;">Sex Offenders</h3>
+    <div class="card-panel white">
+      <table class="responsive-table highlight">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Date of Last Offense</th>
+          </tr>
+        </thead>
+  
         <tbody>
           <tr>
             <td></td>
