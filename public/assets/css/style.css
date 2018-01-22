@@ -2,6 +2,10 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-image: url(../images/NetCity.jpeg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
     }
     
     main {
@@ -11,4 +15,49 @@ body {
     #loglogo {
         width: 50%;
         height: auto;
+    }
+
+    #login-page {
+        margin-left: 15px;
+        margin-right: 15px;
+
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+    }
+
+    @keyframes moveInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    .slogan {
+        font-family: "Lato", sans-serif;
+        color: #ffffff;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        text-align: center;
+
+        animation-name: moveInRight;
+        animation-duration: 3s;
+
+        backface-visibility: hidden;
+    }
+
+    @keyframes moveInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
     }
