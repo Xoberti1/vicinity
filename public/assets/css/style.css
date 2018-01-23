@@ -6,6 +6,7 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+<<<<<<< HEAD
     background-color: #e6e6e6
 }
 
@@ -30,3 +31,64 @@ main {
 .crimeTableBody{
     padding: 0px 15px;
 }
+=======
+    background-image: url(../images/NetCity.jpeg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    }
+    
+    main {
+    flex: 1 0 auto;
+    }
+    
+    #loglogo {
+        width: 50%;
+        height: auto;
+    }
+
+    #login-page {
+        margin-left: 15px;
+        margin-right: 15px;
+
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+    }
+
+    @keyframes moveInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    .slogan {
+        font-family: "Lato", sans-serif;
+        color: #ffffff;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        text-align: center;
+
+        animation-name: moveInRight;
+        animation-duration: 3s;
+
+        backface-visibility: hidden;
+    }
+
+    @keyframes moveInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+>>>>>>> 8150b74e29ee2bc421e813755e0ea344f7bfdc5a
