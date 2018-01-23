@@ -5,6 +5,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,77 +29,6 @@
   </nav>
 <br>
 <br>
-
- <!-- SEARCH CARD SECTION =======--> 
- <div class="row">
-  <div class="col l8 m6 s12" id="searchPanel">
-    <div class="card-panel">
-      <form>
-        <h4>Search</h4>
-
-
-        <!-- TYPE OF SEARCH SELECTOR==================================================-->
-        <div class="input-field col s12">
-          <select id="practices">
-            <option value="" ></option>
-            <option value="crime">Crime Rate</option>
-            <option value="offenders">Sex Offenders</option>
-          </select>
-          <label>Select Area</label>
-        </div>
-        
-
-        <!--ZIP CODE INPUT=====================================================-->
-        <div class="row" id="zipCode">
-          <Label>ZIP Code</Label><input type="text" pattern="[0-9]{5}" title="Five digit zip code" />
-        </div>
-               
-        <!--SUBMIT BUTTON======================================================-->
-        <button id="submitBtn" class="btn waves-effect waves-light blue-grey" type="submit" name="action">Submit<i class="material-icons right">send</i></button>
-      </form>          
-    </div>
-  </div>
-   <!-- RESULTS TABLE =====================================================-->
-  <div class="col l12 m12 s12" id="resultsTable">
-    <div class="card-panel white">						
-      <table class="responsive-table highlight">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Phone</th>
-            <th>Address</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-</div>
- 
-  <br>
-  <br>
 
 <!-- FOOTER SECTION =======-->              
   <footer class="page-footer lime">
