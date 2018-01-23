@@ -1,14 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    }
-    
-    main {
+    background-color: #e6e6e6
+}
+
+main {
     flex: 1 0 auto;
-    }
-    
-    #loglogo {
-        width: 50%;
-        height: auto;
-    }
+}
+
+#loglogo {
+    width: 50%;
+    height: auto;
+}
+
+.mytable{
+    background-color: white;
+}
+
+.crimeTableHead{
+    background-color: gray;
+    padding: 1px;
+}
+
+.crimeTableBody{
+    padding: 0px 15px;
+}
