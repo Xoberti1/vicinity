@@ -10,6 +10,7 @@ var db        = {};
 var Post      = require('posts.js');
 var User      = require('user.js');
 
+
 Posts.belongsTo(User);
 User.hasMany(Posts);
 
