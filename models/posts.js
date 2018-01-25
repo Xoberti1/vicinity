@@ -33,7 +33,7 @@ var Sequelize = require("sequelize");
     },
 
     address: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TEXT,
         allowNull: false
     },
 
@@ -53,6 +53,14 @@ var Sequelize = require("sequelize");
         validate: {
             len: [5,10]
         }
+    },
+
+    lat: {
+      type: sequelize.INTEGER,
+    },
+
+    long: {
+      type: sequelize.INTEGER,
     },
 
     upVote: {
