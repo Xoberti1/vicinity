@@ -92,7 +92,13 @@ var Post = sequelize.define("posts", {
           foreignKey: {
             allowNull: false,
 
-          }
+    downVote: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+    }
+
+
+  }
 
 
         });

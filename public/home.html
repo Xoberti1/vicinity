@@ -5,6 +5,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">    
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,102 +30,33 @@
 <br>
 <br>
 
- <!-- LOGIN SECTION =======--> 
- <div class="row">
-  <div class="col xl4 l4 m4 s12" id="searchPanel">
-    <div class="card-panel">
-      <form>
-        <h4>Neighborhood Search</h4>
-
-
-        <!--PRACTICE SELECTOR==================================================-->
-        <div class="input-field col s12">
-          <select id="practices">
-            <option value="" ></option>
-            <option value="emergency">Emergency Response</option>
-            <option value="crime">Crime Rate</option>
-            <option value="offenders">Sex Offenders</option>
-          </select>
-          <label>Select Area</label>
-        </div>
-        
-
-        <!--ZIP CODE INPUT=====================================================-->
-        <div class="row" id="zipCode">
-          <Label>ZIP Code</Label><input type="text" pattern="[0-9]{5}" title="Five digit zip code" />
-        </div>
-               
-        <!--SUBMIT BUTTON======================================================-->
-        <button id="submitBtn" class="btn waves-effect waves-light blue-grey" type="submit" name="action">Submit<i class="material-icons right">send</i></button>
-      </form>          
-    </div>
-  </div>
-
-  <div class="col l8 m8 s12" id="resultsTable">
-    <div class="card-panel white">						
-      <table class="responsive-table highlight">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Phone</th>
-            <th>Address</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-</div>
- 
-  <br>
-  <br>
-
 <!-- FOOTER SECTION =======-->              
   <footer class="page-footer lime">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Helping you find the right neighborhood.</h5>
-          <p class="grey-text text-lighten-4">Vicinity is committed to providing the most up to date and accurate information about your current or future neighborhood. We provide search tools that will help you make the right choice such as:
-            Emergency response.
-            <br>
-            Crime rate.
-            <br>
-            Nearby sex offenders.
-            <br>
-        </p>
+          <p class="grey-text text-lighten-4"><font color="black">Vicinity is committed to providing the most up to date and accurate information
+              about your current or future neighborhood. 
+              We provide search tools that will help you make the right choice such as:</font> 
+          </p>
+
+          <ul>
+            <font color="black">
+                <li>Crime rate</li>
+                <li>Sex offenders near by</li>
+            </font>
+          </ul>
         </div>
         <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Developers</h5>
           <ul>
-            <li><a class="blue-grey-darken-3-text" href="#!">Xavier Oberti</a></li>
-            <li><a class="blue-grey-darken-3-text" href="#!">Victor Montemayor</a></li>
-            <li><a class="blue-grey-darken-3-text" href="#!">Steven Aruba</a></li>
-            <li><a class="blue-grey-darken-3-text" href="#!">Peter Le</a></li>
-            <li><a class="blue-grey-darken-3-text" href="#!">David Bierma</a></li>
-            <li><a class="blue-grey-darken-3-text" href="#!">David Morales</a></li>
+              <li><a class="black-text" href="#!">Xavier Oberti</a></li>
+              <li><a class="black-text" href="#!">Victor Montemayor</a></li>
+              <li><a class="black-text" href="#!">Steven Aruba</a></li>
+              <li><a class="black-text" href="#!">Peter Le</a></li>
+              <li><a class="black-text" href="#!">David Bierma</a></li>
+              <li><a class="black-text" href="#!">David Morales</a></li>
           </ul>
         </div>
       </div>

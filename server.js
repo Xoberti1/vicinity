@@ -2,7 +2,11 @@
 // Not sure what all npm packages we will be using 
 var express = require("express");
 var bodyParser = require("body-parser");
+<<<<<<< HEAD
 var sequelize = require("sequelize");
+=======
+var path = require("path");
+>>>>>>> e9a479a77453c5d84a9533a8e7812f68f031bfd3
 
 // Sets up the Express App
 var app = express();
