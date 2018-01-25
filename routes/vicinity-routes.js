@@ -20,6 +20,15 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/posts", function (req, res) {
+    db.Post.findAll({
+      where: zipCode,
+      include: [db.User]
+    }).then(function (dbPost) {
+      res.json(dbPost);
+    })
+  })
+
   // Get route for retrieving a single post
   app.get("/api/posts/:id", function (req, res) {
     db.Post.findOne({
