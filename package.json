@@ -1,7 +1,7 @@
 {
   "name": "vicinity",
   "version": "1.0.0",
-  "description": "",
+  "description": "# Project Requirements",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,7 +14,8 @@
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.5.1",
-    "sequelize": "^4.32.1"
+    "sequelize": "^4.32.1",
+    "zippity-do-dah": "0.0.3"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
@@ -37,5 +38,6 @@
   },
   "bugs": {
     "url": "https://github.com/Xoberti1/SafeHood/issues"
-  }
+  },
+  "homepage": "https://github.com/Xoberti1/SafeHood#readme"
 }
