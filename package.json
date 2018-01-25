@@ -33,9 +33,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Xoberti1/SafeHood.git"
+    "url": "git+https://github.com/Xoberti1/vicinity.git"
   },
   "bugs": {
-    "url": "https://github.com/Xoberti1/SafeHood/issues"
+    "url": "https://github.com/Xoberti1/vicinity/issues"
   }
 }
