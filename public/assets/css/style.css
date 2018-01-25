@@ -105,7 +105,12 @@ body {
 }
 
 /* CRIME.HTML STYLING PROPERTIES ====================*/
-.activator{
+/* .activator{
     height: auto;
     width: 300px;
+} */
+
+.report_btn{
+    display: flex;
+    justify-content: center;
 }
