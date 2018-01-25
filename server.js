@@ -29,7 +29,8 @@ require("./routes/user-routes.js")(app);
 require("./routes/vicinity-routes.js")(app);
 
 // Syncing our sequelize models and then starting our express app
-db.sequelize.sync().then(function() {
+
+db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });

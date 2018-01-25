@@ -5,9 +5,12 @@
 body {
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
-<<<<<<< HEAD
-    background-color: #e6e6e6
+    flex-direction: column;        
+    background-color: #e6e6e6;
+    background-image: url(../images/NetCity.jpeg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
 }
 
 main {
@@ -31,16 +34,11 @@ main {
 .crimeTableBody{
     padding: 0px 15px;
 }
-=======
-    background-image: url(../images/NetCity.jpeg);
-    background-size: cover;
-    background-position: top;
-    position: relative;
-    }
+
+
     
-    main {
-    flex: 1 0 auto;
-    }
+    
+
     
     #loglogo {
         width: 50%;
@@ -91,4 +89,3 @@ main {
             transform: translate(0);
         }
     }
->>>>>>> 8150b74e29ee2bc421e813755e0ea344f7bfdc5a
