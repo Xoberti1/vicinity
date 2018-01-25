@@ -2,6 +2,7 @@
 // Not sure what all npm packages we will be using 
 var express = require("express");
 var bodyParser = require("body-parser");
+var path = require("path");
 
 // Sets up the Express App
 var app = express();
@@ -15,6 +16,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
+//require my route
+require("./routes/html-routes.js")(app);
+require("./routes/user-routes.js")(app);
+require("./routes/vicinity-routes.js")(app);
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync({ force: true }).then(function() {
