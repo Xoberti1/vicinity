@@ -1,44 +1,80 @@
-var Posts = sequelize.define("posts", {
+var Sequelize = require("sequelize");
 
-  title: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
+  var Posts = {
+
+    IncidentDate: {
+      type: Sequelize.DATEONLY,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+
+    IncidentTime: {
+      type: Sequelize.TIME,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+
+    IncidentType: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+
+    IncidentDescription: {
+      type: Sequelize.TEXT,
+      allowNull: false,
       len: [1]
-    }
-  },
-  body: {
-    type: DataTypes.TEXT,
-    allowNull: false,
-    len: [1]
-  },
+    },
 
-  upVote: {
+    address: {
+        type: Sequelize.TEXT,
+        allowNull: false
+    },
 
-    type: DataTypes.INTEGER,
-    allowNull: false,
+    city: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
 
-  },
+    state: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
 
-  downVote: {
+    zipCode: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        validate: {
+            len: [5,10]
+        }
+    },
 
-    type: DataTypes.INTEGER,
-    allowNull: false,
+    lat: {
+      type: Sequelize.INTEGER,
+    },
+
+    long: {
+      type: Sequelize.INTEGER,
+    },
+
+    upVote: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
+
+    downVote: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
 
   }
 
-
-})
-
-Post.associate = function (models) {
-    // We're saying that a Post should belong to a user
-    // A Post can't be created without a user  due to the foreign key constraint
-    Post.belongsTo(models.User, {
-          foreignKey: {
-            allowNull: false,
-
-          }
-
-        
-        });
-      }
+  module.exports = Posts;

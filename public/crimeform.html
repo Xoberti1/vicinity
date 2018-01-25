@@ -44,37 +44,47 @@
             <div class="col 6 md">
                 <div class="panel panel-default" style="float:left; clear:both; padding-right:100px;">
                     <div class="panel-heading">
-                        <h4 class="panel-title">Crime Data</h4>
+                        <h4 class="panel-title">Crimes</h4>
                     </div>
                     <div class="panel-body">
                         <form role="form">
                         
                             <div class="form-group">
                             
-                                <label for="crime">Crime:</label>
+                                <label for="crime"><div class="input-field col s12">
+                                    <select>
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1">Theft</option>
+                                        <option value="2">Burglary</option>
+                                        <option value="3">Robbery</option>
+                                        <option value="4">Assualt</option>
+                                        <option value="3">Motor Vehicle Theft</option>
+                                    </select>
+                                    <label>Type of Crime</label>
+                                </div>Location:</label>
                             
-                                <input type="text" class="form-control" id="crime">   </div>
+                                <input type="text" class="form-control" id="location">   </div>
                             <div class="form-group">
-                                <label for="location">Location:</label>
-                                <input type="text" class="form-control" id="location">
+                                <label for="date">Date:</label>
+                                <input type="text" class="form-control" id="date">
                             </div>
                         
                             <div class="form-group">
                             
-                                <label for="offender">Offender:</label>
+                                <label for="description">Description:</label>
                             
-                                <input type="text" class="form-control" id="offender">   </div>
-                            <div class="form-group">
+                                <input type="text" class="form-control" id="description">   </div>
+                            <!-- <div class="form-group">
                             
-                                <label for="percentage">Percentage:</label>
+                                <label for="description">Description:</label>
                             
-                                <input type="text" class="form-control" id="percentage">   </div>
+                                <input type="text" class="form-control" id="description">   </div> -->
                         
                             <!-- <div class="checkbox">
                             
                                 <!-- <label>
                                     <input type="checkbox"> Remember me</label>
-                                </div> --> -->
+                                </div> -->  
                         
                             <button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
                         </form>
@@ -83,36 +93,55 @@
                 </div>
             </div>
         
-            <!-- forms to enter sex offender data -->
+            <!-- forms to enter first responder data -->
 
-            <div class="col 6 md">
+            <!-- <div class="col 6 md">
                 <div class="panel panel-default" style="float:left; padding-left:100px">
                     <div class="panel-heading">
-                        <h4 class="panel-title">Sex Offender Data</h4>
+                        <h4 class="panel-title">First Responders</h4>
                     </div>
                     <div class="panel-body">
                         <form role="form">
                         
                             <div class="form-group">
                             
-                                <label for="name">Name:</label>
+                                <label for="streetaddress">Street Address:</label>
                             
-                                <input type="text" class="form-control" id="name">   </div>
+                                <input type="text" class="form-control" id="streetaddress">   </div>
                             <div class="form-group">
-                                <label for="age">Age:</label>
-                                <input type="text" class="form-control" id="age">
+                                <label for="city">City:</label>
+                                <input type="text" class="form-control" id="city">
                             </div>
                         
                             <div class="form-group">
                             
-                                <label for="address">Address:</label>
+                                <label for="state">State:</label>
                             
-                                <input type="text" class="form-control" id="address">   </div>
+                                <input type="text" class="form-control" id="state">   </div>
                             <div class="form-group">
                             
-                                <label for="dateoflastoffense">Date of Last Offense:</label>
+                                <label for="zipcode">Zipcode:</label>
                             
-                                <input type="text" class="form-control" id="dateoflastoffense">   </div>
+                                <input type="text" class="form-control" id="zipcode">   </div>
+
+                            <div class="form-group">
+                            
+                                <label for="departmenttype"><div class="input-field col s12">
+                                    <select>
+                                        <option value="">Choose your option</option>
+                                        <option value="1">Police</option>
+                                        <option value="2">Fire</option>
+                                    </select>
+                                    <label>Department Type</label>
+                                </div>Phone:</label>
+                            
+                                <input type="text" class="form-control" id="departmenttype">   </div> -->
+
+                            <!-- <div class="form-group">
+                            
+                                <label for="phone">Phone:</label>
+                            
+                                <input type="text" class="form-control" id="phone">   </div> -->
                         
                             <!-- <div class="checkbox">
                             
@@ -140,7 +169,7 @@
                         future neighborhood. We provide search tools that will help you make the right choice such as: Emergency
                         response.
                         <br> Crime rate.
-                        <br> Nearby sex offenders.
+                        <br> First Responders.
                         <br>
                     </p>
                 </div>

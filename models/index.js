@@ -7,6 +7,8 @@ var basename  = path.basename(__filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
+var Post      = require('./posts.js');
+var User      = require('./user.js');
 
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable], config);
@@ -14,21 +16,25 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-fs
-  .readdirSync(__dirname)
-  .filter(file => {
-    return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
-  })
-  .forEach(file => {
-    var model = sequelize['import'](path.join(__dirname, file));
-    db[model.name] = model;
-  });
+db.Post = sequelize.define('posts', Post, {timestamps: false});
+db.User = sequelize.define('user', User, {timestamps: false});
 
-Object.keys(db).forEach(modelName => {
-  if (db[modelName].associate) {
-    db[modelName].associate(db);
-  }
-});
+Post.associate = function(models) {
+  Post.belongsTo(models.User, {
+    foreignKey: {
+      allowNull: false
+    }
+  });
+};
+
+User.associate = function(models) {
+  User.hasMany(models.Post, {
+    foreignKey: {
+      allowNull: false
+    }
+  });
+};
+
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

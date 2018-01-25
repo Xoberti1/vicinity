@@ -1,14 +1,20 @@
 {
-  "name": "safehood",
+  "name": "vicinity",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Xavier",
+  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.5.1",
-    "sequelize": "^4.31.2"
+    "sequelize": "^4.32.1"
   },
   "devDependencies": {
     "browserify": "^13.1.1",
@@ -25,18 +31,11 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Xoberti1/SafeHood.git"
+    "url": "git+https://github.com/Xoberti1/vicinity.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Xoberti1/SafeHood/issues"
-  },
-  "homepage": "https://github.com/Xoberti1/SafeHood#readme"
+    "url": "https://github.com/Xoberti1/vicinity/issues"
+  }
 }
