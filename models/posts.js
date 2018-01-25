@@ -56,11 +56,11 @@ var Sequelize = require("sequelize");
     },
 
     lat: {
-      type: sequelize.INTEGER,
+      type: Sequelize.INTEGER,
     },
 
     long: {
-      type: sequelize.INTEGER,
+      type: Sequelize.INTEGER,
     },
 
     upVote: {
