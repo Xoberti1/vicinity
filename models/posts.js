@@ -33,7 +33,7 @@ var Sequelize = require("sequelize");
     },
 
     address: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TEXT,
         allowNull: false
     },
 
@@ -55,16 +55,32 @@ var Sequelize = require("sequelize");
         }
     },
 
+    lat: {
+      type: sequelize.INTEGER,
+    },
+
+    long: {
+      type: sequelize.INTEGER,
+    },
+
     upVote: {
       type: Sequelize.INTEGER,
       allowNull: false,
+      defaultValue: 0,
     },
 
     downVote: {
       type: Sequelize.INTEGER,
       allowNull: false,
-    }
+      defaultValue: 0,
+    },
 
+    lat: {
+      type: Sequelize.INTEGER,
+    },
+    long: {
+      type: Sequelize.INTEGER,
+    },
 
   }
 

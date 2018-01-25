@@ -1,7 +1,3 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
-
 // Dependencies
 // =============================================================
 var express = require('express');
@@ -12,17 +8,29 @@ var path = require("path");
 // =============================================================
 module.exports = function (app) {
 
-    // Each of the below routes just handles the HTML page that the user gets sent to.
+	app.get("/", function(req, res){
+		res.render("index",{
+			title: "title"
+		});
+	});
 
-    // index route loads login.html
-    app.get("/", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/login.html"));
-    });
+	app.get("/profile", function(req, res){
+		res.render("profile",{
+			title: "title"
+		});
+	});
 
-    // authors route loads home.html
-    app.get("/home", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/home.html"));
-    });
+	app.get("/crimes", function(req, res){
+		res.render("crimes",{
+			title: "title"
+		});
+	});
+
+	app.get("/firstresponders", function(req, res){
+		res.render("firstresponders",{
+			title: "title"
+		});
+	});
 
     // authors route loads profile.html
     app.get("/profile", function (req, res) {
