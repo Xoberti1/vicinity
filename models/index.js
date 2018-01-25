@@ -16,8 +16,8 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-db.Post = sequelize.define('posts', Post);
-db.User = sequelize.define('user', User);
+db.Post = sequelize.define('posts', Post, {timestamps: false});
+db.User = sequelize.define('user', User, {timestamps: false});
 
 Post.associate = function(models) {
   Post.belongsTo(models.User, {
@@ -35,24 +35,6 @@ User.associate = function(models) {
   });
 };
 
-// db.Post.belongsTo(User);
-// db.User.hasMany(Posts);
-
-// fs
-//   .readdirSync(__dirname)
-//   .filter(file => {
-//     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
-//   })
-//   .forEach(file => {
-//     var model = sequelize['import'](path.join(__dirname, file));
-//     db[model.name] = model;
-//   });
-
-// Object.keys(db).forEach(modelName => {
-//   if (db[modelName].associate) {
-//     db[modelName].associate(db);
-//   }
-// });
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
