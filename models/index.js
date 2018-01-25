@@ -16,8 +16,8 @@ if (config.use_env_variable) {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-db.Post = sequelize.define('posts', Post);
-db.User = sequelize.define('user', User);
+db.Post = sequelize.define('posts', Post, {timestamps: false});
+db.User = sequelize.define('user', User, {timestamps: false});
 
 Post.associate = function(models) {
   Post.belongsTo(models.User, {
