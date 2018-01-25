@@ -38,7 +38,7 @@ var User = {
         allowNull: false
     },
     Address: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.TEXT,
         allowNull: false
     },
     zipCode: {

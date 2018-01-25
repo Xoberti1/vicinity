@@ -75,13 +75,6 @@ var Sequelize = require("sequelize");
       defaultValue: 0,
     },
 
-    lat: {
-      type: Sequelize.INTEGER,
-    },
-    long: {
-      type: Sequelize.INTEGER,
-    },
-
   }
 
   module.exports = Posts;
