@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "development": {
     "username": "root",
     "password": "root",
@@ -18,3 +19,27 @@
     "dialect": "mysql"
   }
 }
+=======
+    "development": {
+      "username": "root",
+      "password": "root",
+      "database": "vicinity",
+      "host": "localhost",
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "root",
+      "password": null,
+      "database": "vicinity",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "root",
+      "password": null,
+      "database": "vicinity",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    }
+  }
+>>>>>>> 0d9f0f783189e591f8a01a9db9d7f20e06ce36a5
