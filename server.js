@@ -34,4 +34,36 @@ db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
+//   sequelize.User.create(
+//     {
+//       firstName: "xavier",
+//       lastname: "oberti",
+//       username: "xoberti@gmail.com",
+//       password: "catinthehat",
+//       city: "harris county",
+//       state: "TX",
+//       Address: "11526 Moonmist Drive",
+//       zipCode: 77072,
+//     }
+//   )
 });
+
+
+// app.listen(PORT, () => {
+//   console.log("Your server has started.")
+//   db.sequelize.sync({}).then(() => {
+//     console.log("Your database is online.");
+//     db.User.create(
+//       {
+//         firstName: "xavier",
+//         lastName: "oberti",
+//         username: "xoberti@gmail.com",
+//         password: "catinthehat",
+//         city: "harris county",
+//         state: "TX",
+//         Address: "11526 Moonmist Drive",
+//         zipCode: 77072,
+//       }
+//     )
+//   })
+// });
