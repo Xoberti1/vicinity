@@ -19,21 +19,21 @@ if (config.use_env_variable) {
 db.Post = sequelize.define('posts', Post, {timestamps: false});
 db.User = sequelize.define('user', User, {timestamps: false});
 
-Post.associate = function(models) {
-  Post.belongsTo(models.User, {
-    foreignKey: {
-      allowNull: false
-    }
-  });
-};
+// Post.associate = function(models) {
+//   Post.belongsTo(models.User, {
+//     foreignKey: {
+//       allowNull: false
+//     }
+//   });
+// };
 
-User.associate = function(models) {
-  User.hasMany(models.Post, {
-    foreignKey: {
-      allowNull: false
-    }
-  });
-};
+// User.associate = function(models) {
+//   User.hasMany(models.Post, {
+//     foreignKey: {
+//       allowNull: false
+//     }
+//   });
+// };
 
 
 db.sequelize = sequelize;
