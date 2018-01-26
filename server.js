@@ -34,18 +34,18 @@ db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
-//   sequelize.User.create(
-//     {
-//       firstName: "xavier",
-//       lastname: "oberti",
-//       username: "xoberti@gmail.com",
-//       password: "catinthehat",
-//       city: "harris county",
-//       state: "TX",
-//       Address: "11526 Moonmist Drive",
-//       zipCode: 77072,
-//     }
-//   )
+//   // sequelize.User.create(
+//   //   {
+//   //     firstName: "Peter",
+//   //     lastname: "Le",
+//   //     username: "shortboipeter@gmail.com",
+//   //     password: "chicken",
+//   //     city: "Houston",
+//   //     state: "TX",
+//   //     Address: "10694 Jones Rd",
+//   //     zipCode: 77064,
+//   //   }
+//   // )
 });
 
 
@@ -55,14 +55,14 @@ db.sequelize.sync({}).then(function() {
 //     console.log("Your database is online.");
 //     db.User.create(
 //       {
-//         firstName: "xavier",
-//         lastName: "oberti",
-//         username: "xoberti@gmail.com",
-//         password: "catinthehat",
-//         city: "harris county",
-//         state: "TX",
-//         Address: "11526 Moonmist Drive",
-//         zipCode: 77072,
+//       firstName: "Peter",
+//       lastName: "le",
+//       username: "shortboipeter@gmail.com",
+//       password: "chicken",
+//       city: "Houston",
+//       state: "TX",
+//       Address: "10694 Jones Rd",
+//       zipCode: 77064,
 //       }
 //     )
 //   })

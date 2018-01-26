@@ -29,13 +29,28 @@ $(document).ready(function() {
                     console.log(emailVal);
                     console.log(pass);
                     if (guy.username === emailVal && guy.password === pass) {
-                        window.location.href = "profile.html";
+                        window.location.href = "profile";
                     }
                 }
                 console.log(data);
                 console.log("something happened")
             });
         }
+        // function getCrimes(){
+        //     $get("/api/posts")
+            
+        //     db.User.findAll({
+        //         where: {
+        //             password = req.body.password
+        //         }
+        //     }).then(function(req, res){
+        //         db.Post.findAll({
+        //             where: {
+        //                 zipCode = req.body.zipCode
+        //             }.then(function(dbPost) {
+        //                 res.json(dbPost);
+        //         })
+        //     })
 
     });
 })    
