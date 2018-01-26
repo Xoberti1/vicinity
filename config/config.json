@@ -2,22 +2,19 @@
     "development": {
       "username": "root",
       "password": "root",
-      "database": "vicinity",
+      "database": "vicinity_db",
       "host": "localhost",
       "dialect": "mysql"
     },
     "test": {
       "username": "root",
       "password": null,
-      "database": "vicinity",
+      "database": "vicinity_db",
       "host": "127.0.0.1",
       "dialect": "mysql"
     },
     "production": {
-      "username": "root",
-      "password": null,
-      "database": "vicinity",
-      "host": "127.0.0.1",
-      "dialect": "mysql"
+      "dialect": "mysql",
+      "use_env_variable": "JAWSDB_URL"
     }
   }
