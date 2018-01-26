@@ -23,7 +23,7 @@ module.exports = function (app) {
   app.get("/api/posts", function (req, res) {
     db.Post.findAll({
       where: zipCode,
-      include: [db.User]
+      include: [db.User.zipCode]
     }).then(function (dbPost) {
       res.json(dbPost);
     })

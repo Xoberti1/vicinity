@@ -1,21 +1,41 @@
+<main>
 <br>
 <br>
-<!-- trial card -->
+<!-- Profile Card -->
 <div class="container">
   <div class="row">
     <section class="col s3">
       <div class="card" id="profile">
+        <div>
+          <h3 class="card-title">My Profile</h3>
+        </div>
         <div class="card-image">
           <img src="images/team2.jpg">
-          <span class="card-title">Profile</span>
         </div>
         <div class="card-content">
-          <p>Address</p>
+          <p>
+            Street Address: {{streetAddress}}
+            <br> City: {{city}}
+            <br> State: {{state}}
+            <br> Zips: {{zip}}
+            <br>
+          </p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <a href="#">Change Address</a>
         </div>
       </div>
+
+      <!--SUBMIT BUTTON======================================================-->
+      <button id="reportCrime" class="btn waves-effect waves-light blue-grey" type="submit" name="action">
+        Report Crime
+      </button>
+
+            <!--SUBMIT BUTTON======================================================-->
+      <button id="searchCrime" class="btn waves-effect waves-light blue-grey" type="submit" name="action">
+        Search An Area for Crime
+      </button>
+
     </section>
     <section class="col s8 offset-s1" id="resultsTable">
       <div id="crimeRate" class='mytable'>
@@ -60,13 +80,8 @@
   </div>
 </div>
 
-<!--SUBMIT BUTTON======================================================-->
-<button id="submitBtn" class="btn waves-effect waves-light blue-grey" type="submit" name="action" style="max-width:200px; margin-left:190px;">Report Crime
-  <i class="material-icons right">send</i>
-</button>
-
 </div>
-
+</main>
 <!-- FOOTER SECTION =======-->
 <footer class="page-footer lime">
   <div class="container">
