@@ -39,10 +39,6 @@ $(document).ready(function() {
                     console.log(pass);
                     if (guy.username === emailVal && guy.password === pass) {
                         window.location.href = "profile";
-<<<<<<< HEAD:public/assets/script/logic.js
-=======
-                        console.log(guy.zipCode);
->>>>>>> 62dc21a5e3bf2b040b2baf53b9848a173ad2aee8:public/assets/script/logic.js
                     }
                 }
                 console.log(data);
