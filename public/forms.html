@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vicinity Forms</title>
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR SECTION =======-->
+    <nav>
+        <div class="nav-wrapper lime">
+            <img>
+            <a href="#" class="brand-logo left">Logo</a>
+            <ul id="nav-mobile" class="right">
+                <li>
+                    <a href="sass.html">Account</a>
+                </li>
+                <li>
+                    <a href="badges.html">What is Vicinity?</a>
+                </li>
+                <li>
+                    <a href="collapsible.html">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+    <br>
+
+    <!-- forms to enter sex offender data -->
+    <div class="row">
+        <div class="col s12 m6 l12 grey lighten-4">
+            <div class="panel panel-default" style="float:left; padding-left:100px ">
+                <div class="panel-heading">
+                    <h4 class="panel-title">Add a Crime</h4>
+                </div>
+                <div class="panel-body">
+                    <form role="form">
+
+                        <div class="form-group">
+
+                            <label for="streetaddress">Street Address:</label>
+
+                            <input type="text" class="form-control" id="streetaddress">   </div>
+                        <div class="form-group">
+                            <label for="city">City:</label>
+                            <input type="text" class="form-control" id="city">
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="state">State:</label>
+
+                            <input type="text" class="form-control" id="state">   </div>
+                        <div class="form-group">
+
+                            <label for="zipcode">Zipcode:</label>
+
+                            <input type="text" class="form-control" id="zipcode">   </div>
+
+                        <div class="form-group">
+                            <label for="crime_type">Type of crime</label>
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="">Type of crime</option>
+                                    <option value="1">Assault</option>
+                                    <option value="2">Auto Theft</option>
+                                    <option value="2">Burglary</option>
+                                    <option value="2">Rape</option>
+                                    <option value="2">Robbery</option>
+                                </select>
+                                </label>
+                                <input type="text" class="form-control" id="departmenttype">
+                            </div>
+                    </form>
+                    </div>
+                    <button type="submit" class="btn btn-default" id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <br>
+        <br>
+
+        <!-- FOOTER SECTION =======-->
+        <footer class="page-footer lime">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Helping you find the right neighborhood.</h5>
+                        <p class="grey-text text-lighten-4">Vicinity is committed to providing the most up to date and accurate information about your current
+                            or future neighborhood. We provide search tools that will help you make the right choice such
+                            as: Emergency response.
+                            <br> Crime rate.
+                            <br> First Responders.
+                            <br>
+                        </p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Developers</h5>
+                        <ul>
+                            <li>
+                                <a class="blue-grey-darken-3-text" href="#!">Xavier Oberti</a>
+                            </li>
+                            <li>
+                                <a class="blue-grey-darken-3-text" href="#!">Victor Montemayor</a>
+                            </li>
+                            <li>
+                                <a class="blue-grey-darken-3-text" href="#!">Steven Aruba</a>
+                            </li>
+                            <li>
+                                <a class="blue-grey-darken-3-text" href="#!">Peter Le</a>
+                            </li>
+                            <li>
+                                <a class="blue-grey-darken-3-text" href="#!">David Bierma</a>
+                            </li>
+                            <li>
+                                <a class="blue-grey-darken-3-text" href="#!">David Morales</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container center">
+                    © 2018 Copyright Text
+                </div>
+            </div>
+        </footer>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script type="text/javascript" src="./assets/script/logic.js"></script>
+</body>
+
+</html>

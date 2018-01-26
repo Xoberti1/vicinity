@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 
 body {
@@ -13,7 +13,7 @@ body {
     position: relative;
 }
 
-main {
+.main {
     flex: 1 0 auto;
 }
 
@@ -35,57 +35,83 @@ main {
     padding: 0px 15px;
 }
 
+#loglogo {
+    width: 50%;
+    height: auto;
+}
 
-    
-    
+#login_page {
+    width: 100%;
+    margin-left: auto;
 
-    
-    #loglogo {
-        width: 50%;
-        height: auto;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
     }
-
-    #login-page {
-        margin-left: 15px;
-        margin-right: 15px;
-
-        animation-name: moveInLeft;
-        animation-duration: 2s;
+    100% {
+        opacity: 1;
+        transform: translate(0);
     }
+}
 
-    @keyframes moveInLeft {
-        0% {
-            opacity: 0;
-            transform: translateX(-100px);
+#registry_page {
+    width: 80%;
+    padding: 5px;
+    margin: auto;
+
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.slogan {
+    font-family: "Lato", sans-serif;
+    color: #ffffff;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    text-align: center;
+
+    animation-name: moveInRight;
+    animation-duration: 3s;
+
+    backface-visibility: hidden;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
         }
-        100% {
-            opacity: 1;
-            transform: translate(0);
-        }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
     }
+}
 
-    .slogan {
-        font-family: "Lato", sans-serif;
-        color: #ffffff;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        text-align: center;
+/* CRIME.HTML STYLING PROPERTIES ====================*/
+/* .activator{
+    height: auto;
+    width: 300px;
+} */
 
-        animation-name: moveInRight;
-        animation-duration: 3s;
-
-        backface-visibility: hidden;
-    }
-
-    @keyframes moveInRight {
-        0% {
-            opacity: 0;
-            transform: translateX(100px);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translate(0);
-        }
-    }
+.report_btn{
+    display: flex;
+    justify-content: center;
+}
