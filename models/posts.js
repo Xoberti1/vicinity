@@ -1,6 +1,6 @@
 var Sequelize = require("sequelize");
 
-  var Posts = {
+  var Post = {
 
     IncidentDate: {
       type: Sequelize.DATEONLY,
@@ -56,11 +56,11 @@ var Sequelize = require("sequelize");
     },
 
     lat: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.FLOAT,
     },
 
     long: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.FLOAT,
     },
 
     upVote: {
@@ -77,4 +77,4 @@ var Sequelize = require("sequelize");
 
   }
 
-  module.exports = Posts;
+  module.exports = Post;
