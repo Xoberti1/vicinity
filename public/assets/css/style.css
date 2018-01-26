@@ -5,12 +5,8 @@ box-sizing: border-box;
 body {
     display: flex;
     min-height: 100vh;
-<<<<<<< HEAD
-    flex-direction: column;
-=======
     flex-direction: column;        
     background-color: #e6e6e6;
->>>>>>> df4bb4c17c817ce150a27575bdd33d26f645e0bb
     background-image: url(../images/NetCity.jpeg);
     background-size: cover;
     background-position: top;
@@ -39,7 +35,6 @@ body {
     padding: 0px 15px;
 }
 
-<<<<<<< HEAD
 #loglogo {
     width: 50%;
     height: auto;
@@ -61,16 +56,6 @@ body {
     100% {
         opacity: 1;
         transform: translate(0);
-=======
-
-    
-    
-
-    
-    #loglogo {
-        width: 50%;
-        height: auto;
->>>>>>> df4bb4c17c817ce150a27575bdd33d26f645e0bb
     }
 }
 
@@ -118,7 +103,6 @@ body {
         opacity: 1;
         transform: translate(0);
     }
-<<<<<<< HEAD
 }
 
 /* CRIME.HTML STYLING PROPERTIES ====================*/
@@ -131,5 +115,3 @@ body {
     display: flex;
     justify-content: center;
 }
-=======
->>>>>>> df4bb4c17c817ce150a27575bdd33d26f645e0bb
