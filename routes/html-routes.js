@@ -32,18 +32,15 @@ module.exports = function (app) {
 		});
 	});
 
-    // authors route loads profile.html
-    app.get("/profile", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/profile.html"));
-    });
+	app.get("/aboutus", function(req, res){
+		res.render("aboutus",{
+			title: "title"
+		});
+	});
 
-    // authors route loads crimeform.html
-    app.get("/crimeform", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/crimeform.html"));
-    });
-
-    // authors route loads firstresponderform.html
-    app.get("/firstresponderform", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/firstresponderform.html"));
-    });
+	app.get("/whatisvicinity", function(req, res){
+		res.render("whatisvicinity",{
+			title: "title"
+		});
+	});
 };
