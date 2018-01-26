@@ -67,4 +67,10 @@ module.exports = function (app) {
 			title: "title"
 		});
 	});
+
+	app.get("/crimeform", function (req, res) {
+		res.render("crimeform", {
+			title: "title"
+		});
+	});
 };
