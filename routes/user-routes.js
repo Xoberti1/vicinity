@@ -21,7 +21,16 @@ module.exports = function (app) {
 	});
 
 	app.post("/api/users", function (req, res) {
-		db.User.create(req.body).then(function (dbUser) {
+		console.log(req.body);
+		db.User.create({
+			name: req.body.name,
+			streetAddress: req.body.streetAddress,
+			city: req.body.city,
+			state: req.body.state,
+			zipCode: req.body.zipCode,
+			username: req.body.username,
+			password: req.body.password
+		}).then(function (dbUser) {
 			res.json(dbUser);
 		});
 	});

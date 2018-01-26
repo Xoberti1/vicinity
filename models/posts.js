@@ -1,80 +1,81 @@
 var Sequelize = require("sequelize");
 
-  var Posts = {
+var Posts = {
 
-    IncidentDate: {
-      type: Sequelize.DATEONLY,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-
-    IncidentTime: {
-      type: Sequelize.TIME,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-
-    IncidentType: {
-      type: Sequelize.STRING,
-      allowNull: false,
-      validate: {
-        len: [1]
-      }
-    },
-
-    IncidentDescription: {
-      type: Sequelize.TEXT,
-      allowNull: false,
+  IncidentDate: {
+    type: Sequelize.DATEONLY,
+    allowNull: false,
+    validate: {
       len: [1]
-    },
+    }
+  },
 
-    address: {
-        type: Sequelize.TEXT,
-        allowNull: false
-    },
+  IncidentTime: {
+    type: Sequelize.TIME,
+    allowNull: false,
+    validate: {
+      len: [1]
+    }
+  },
 
-    city: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
+  IncidentType: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      len: [1]
+    }
+  },
 
-    state: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
+  IncidentDescription: {
+    type: Sequelize.TEXT,
+    allowNull: false,
+    len: [1]
+  },
 
-    zipCode: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        validate: {
-            len: [5,10]
-        }
-    },
+  address: {
+    type: Sequelize.TEXT,
+    allowNull: false
+  },
 
-    lat: {
-      type: Sequelize.INTEGER,
-    },
+  city: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
 
-    long: {
-      type: Sequelize.INTEGER,
-    },
+  state: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
 
-    upVote: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-      defaultValue: 0,
-    },
+  zipCode: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      len: [5, 10]
+    }
+  },
 
-    downVote: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-      defaultValue: 0,
-    },
+  lat: {
+    type: Sequelize.FLOAT,
 
-  }
+  },
 
-  module.exports = Posts;
+  long: {
+    type: Sequelize.FLOAT,
+  },
+
+  upVote: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    defaultValue: 0,
+  },
+
+  downVote: {
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    defaultValue: 0,
+  },
+
+}
+
+module.exports = Posts;
