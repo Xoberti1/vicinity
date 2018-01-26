@@ -23,7 +23,7 @@ module.exports = function (app) {
   app.get("/api/posts", function (req, res) {
     db.Post.findAll({
       where: zipCode,
-      include: [db.User]
+      include: [db.User.zipCode]
     }).then(function (dbPost) {
       res.json(dbPost);
     })
@@ -33,7 +33,7 @@ module.exports = function (app) {
   app.get("/api/posts/:id", function (req, res) {
     db.Post.findOne({
       where: {
-        id: req.params.id
+        zip: req.params.zipCode
       },
       include: [db.User]
     }).then(function (dbPost) {
@@ -43,7 +43,14 @@ module.exports = function (app) {
 
   // POST route for saving a new post
   app.post("/api/posts", function (req, res) {
-    db.Post.create(req.body).then(function (dbPost) {
+    console.log(req.body);
+    db.Post.create({
+      type: req.body.type,
+      location: req.body.location,
+      description: req.body.description,
+      date: req.body.date,
+      time: req.body.time,
+    }).then(function (dbPost) {
       res.json(dbPost);
     });
   });
