@@ -5,8 +5,6 @@ var app = express();
 var path = require("path");
 var db = require("../models");
 
-
-
 // Routes
 // =============================================================
 module.exports = function (app) {
@@ -60,6 +58,12 @@ module.exports = function (app) {
 
 	app.get("/whatisvicinity", function(req, res){
 		res.render("whatisvicinity",{
+			title: "title"
+		});
+	});
+
+	app.get("/registry", function (req, res) {
+		res.render("registry", {
 			title: "title"
 		});
 	});

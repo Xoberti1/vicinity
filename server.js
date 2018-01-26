@@ -33,37 +33,5 @@ require("./routes/vicinity-routes.js")(app);
 db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
-  });
-//   // sequelize.User.create(
-//   //   {
-//   //     firstName: "Peter",
-//   //     lastname: "Le",
-//   //     username: "shortboipeter@gmail.com",
-//   //     password: "chicken",
-//   //     city: "Houston",
-//   //     state: "TX",
-//   //     Address: "10694 Jones Rd",
-//   //     zipCode: 77064,
-//   //   }
-//   // )
+  })
 });
-
-
-// app.listen(PORT, () => {
-//   console.log("Your server has started.")
-//   db.sequelize.sync({}).then(() => {
-//     console.log("Your database is online.");
-//     db.User.create(
-//       {
-//       firstName: "Peter",
-//       lastName: "le",
-//       username: "shortboipeter@gmail.com",
-//       password: "chicken",
-//       city: "Houston",
-//       state: "TX",
-//       Address: "10694 Jones Rd",
-//       zipCode: 77064,
-//       }
-//     )
-//   })
-// });
