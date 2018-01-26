@@ -1,5 +1,7 @@
 // Dependencies
 // =============================================================
+var express = require('express');
+var app = express();
 var path = require("path");
 
 // Routes
@@ -30,4 +32,15 @@ module.exports = function (app) {
 		});
 	});
 
+	app.get("/aboutus", function(req, res){
+		res.render("aboutus",{
+			title: "title"
+		});
+	});
+
+	app.get("/whatisvicinity", function(req, res){
+		res.render("whatisvicinity",{
+			title: "title"
+		});
+	});
 };

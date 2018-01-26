@@ -1,16 +1,16 @@
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyDuoao9FtYGSQVC26j7tD8Ek1qXbRdDC-o",
-    authDomain: "train-schuduler.firebaseapp.com",
-    databaseURL: "https://train-schuduler.firebaseio.com",
-    projectId: "train-schuduler",
-    storageBucket: "",
-    messagingSenderId: "189953521156"
-};
-// create a variable to reference the database
-firebase.initializeApp(config);
+// // Initialize Firebase
+// var config = {
+//     apiKey: "AIzaSyDuoao9FtYGSQVC26j7tD8Ek1qXbRdDC-o",
+//     authDomain: "train-schuduler.firebaseapp.com",
+//     databaseURL: "https://train-schuduler.firebaseio.com",
+//     projectId: "train-schuduler",
+//     storageBucket: "",
+//     messagingSenderId: "189953521156"
+// };
+// // create a variable to reference the database
+// firebase.initializeApp(config);
 
-var database = firebase.database();
+// var database = firebase.database();
 
 // creating variables from the html ids in form group
 var crime = "";
