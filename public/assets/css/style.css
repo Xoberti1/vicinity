@@ -22,8 +22,9 @@ main {
 }
 
 .crimeTableHead{
-    background-color: gray;
+    /* background-color: gray; */
     padding: 1px;
+    margin-top: 7px;
 }
 
 .crimeTableBody{
@@ -34,8 +35,23 @@ main {
     font-size: 34px;
     font-weight: 300;
     text-align: center;
-    padding: 10px;
+    padding: 0px;
     margin: 0px;
+}
+.card .card-image .card-title{
+    padding: 5px;
+}
+
+.card .aboutName {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: left;
+    padding: 0px;
+    margin: 0px;
+}
+
+i .votes{
+    font-size: 1rem;
 }
 
 #reportCrime {
@@ -48,15 +64,32 @@ main {
     width: 100%;
 }
 
+#profileCard {
+    margin-top: 0px;
+}
+
+#whatisvicinity {
+    opacity: .7;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 20px;
+}
 #loglogo {
     width: 50%;
     height: auto;
 }
 
+#navbarlogo {
+    width:30%;
+    height: auto;
+    margin-top: 6px;
+}
+
 #login-page {
-    width: 100%;
-    margin-left: auto;
-    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
 
     animation-name: moveInLeft;
     animation-duration: 2s;
@@ -71,15 +104,6 @@ main {
         opacity: 1;
         transform: translate(0);
     }
-}
-
-#registry_page {
-    width: 80%;
-    margin-left: 30%;
-    margin-right: 30%;
-
-    animation-name: moveInLeft;
-    animation-duration: 2s;
 }
 
 .slogan {
@@ -101,6 +125,7 @@ main {
         opacity: 0;
         transform: translateX(100px);
     }
+}
 
     100% {
         opacity: 1;
@@ -108,7 +133,3 @@ main {
     }
 }
 
-.report_btn {
-    display: flex;
-    justify-content: center;
-}
