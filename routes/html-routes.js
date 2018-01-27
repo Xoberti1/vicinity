@@ -16,28 +16,32 @@ module.exports = function (app) {
 	});
 
     app.get("/profile", function (req, res) {
-        console.log(new Date())
+        // console.log(new Date())
         db.User.findOne({
             where: {
                 // password: req.body.password
                 id: 1
-            }
+			},
         }).then(function (userData) {
-            console.log("userdata: " + userData.zipCode);
+			// console.log("userdata: " + userData.zipCode);
             db.Post.findAll({
+				limit: 10,
+				// order: '"IncidentDate", DESC',
                 where: {
-                    zipCode: userData.zipCode
-                }
-            }).then(function (dbPost) {
-                console.log(dbPost)
+					zipCode: userData.zipCode
+				},
+				includes: userData
+			}).then(function (dbPost) {
                 obj = {
-                    post: dbPost
+					post: dbPost,
+					user: userData
                 }
-                console.log(obj)
+                // console.log(obj)
                 res.render("profile", obj);
             });
         })
-    });
+	});
+	
 
 	app.get("/crimes", function(req, res){
 		res.render("crimes",{
@@ -51,14 +55,14 @@ module.exports = function (app) {
 		});
 	});
 
-	app.get("/aboutus", function(req, res){
-		res.render("aboutus",{
+	app.get("/about_us", function(req, res){
+		res.render("about_us",{
 			title: "title"
 		});
 	});
 
-	app.get("/whatisvicinity", function(req, res){
-		res.render("whatisvicinity",{
+	app.get("/what_is_vicinity", function(req, res){
+		res.render("what_is_vicinity",{
 			title: "title"
 		});
 	});
@@ -69,8 +73,13 @@ module.exports = function (app) {
 		});
 	});
 
-	app.get("/crimeform", function (req, res) {
-		res.render("crimeform", {
+	app.get("/report_crime", function (req, res) {
+		res.render("report_crime", {
+			title: "title"
+		});
+	});
+	app.get("/maps", function (req, res) {
+		res.render("maps", {
 			title: "title"
 		});
 	});
