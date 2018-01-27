@@ -6,7 +6,7 @@ var path = require("path");
 
 // Sets up the Express App
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8090;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -33,5 +33,23 @@ require("./routes/vicinity-routes.js")(app);
 db.sequelize.sync({force:true}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
-  });
+  })
 });
+
+// app.listen(PORT, () => {
+//   console.log("Your server has started.")
+//   db.sequelize.sync({}).then(() => {
+//     console.log("Your database is online.");
+//     db.User.create(
+//       {
+//         name: "xavier oberti",
+//         username: "xoberti@gmail.com",
+//         password: "catinthehat",
+//         city: "harris county",
+//         state: "TX",
+//         Address: "11526 Moonmist Drive",
+//         zipCode: 77072,
+//       }
+//     )
+//   })
+// });

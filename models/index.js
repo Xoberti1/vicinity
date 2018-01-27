@@ -27,13 +27,13 @@ Post.associate = function(models) {
   });
 };
 
-User.associate = function(models) {
-  User.hasMany(models.Post, {
-    foreignKey: {
-      allowNull: false
-    }
-  });
-};
+// User.associate = function(models) {
+//   User.hasMany(models.Post, {
+//     foreignKey: {
+//       allowNull: false
+//     }
+//   });
+// };
 
 
 db.sequelize = sequelize;

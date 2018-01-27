@@ -3,6 +3,7 @@
 var express = require('express');
 var app = express();
 var path = require("path");
+var db = require("../models");
 
 // Routes
 // =============================================================
@@ -10,14 +11,33 @@ module.exports = function (app) {
 
 	app.get("/", function(req, res){
 		res.render("index",{
-			title: "title"
+			title: "title",
 		});
 	});
 
-	app.get("/profile", function(req, res){
-		res.render("profile",{
-			title: "title"
-		});
+	// app.get("/profile", function(req, res){
+	// 	res.render("profile",{
+	// 		title: "title"
+	// 	});
+	// });
+	app.get("/profile", function (req, res) {
+		db.User.findOne({
+			where: {
+				// password: req.body.password
+				id: 1
+			}
+		}).then(function (userData) {
+			console.log("userdata: " + userData.zipCode);
+			db.Post.findAll({
+				where: {
+					zipCode: userData.zipCode
+				}
+			}).then(function (dbPost) {
+				dbPost.title = 'title';
+				res.render("profile", { post: dbPost.title });
+				console.log(dbPost.post);
+			});
+		})
 	});
 
 	app.get("/crimes", function(req, res){
@@ -44,8 +64,14 @@ module.exports = function (app) {
 		});
 	});
 
-	app.get("/maps", function(req, res){
-		res.render("maps",{
+	app.get("/registry", function (req, res) {
+		res.render("registry", {
+			title: "title"
+		});
+	});
+
+	app.get("/crimeform", function (req, res) {
+		res.render("crimeform", {
 			title: "title"
 		});
 	});

@@ -1,6 +1,6 @@
 var Sequelize = require("sequelize");
 
-  var Posts = {
+  var Post = {
 
     IncidentDate: {
       type: Sequelize.DATEONLY,
@@ -77,4 +77,4 @@ var Sequelize = require("sequelize");
 
   }
 
-  module.exports = Posts;
+  module.exports = Post;
