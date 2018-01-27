@@ -16,7 +16,7 @@ module.exports = function (app) {
 	});
 
 	app.get("/profile", function(req, res){
-<<<<<<< HEAD
+        HEAD
 		res.render("profile",{
 			title: "title"
 		});
