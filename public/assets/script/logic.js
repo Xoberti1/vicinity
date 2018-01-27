@@ -75,30 +75,31 @@ $(document).ready(function() {
     sendCrimeReport.on("click", function(postData){
         console.log("reporting crime...")
         event.preventDefault();
-        var posttype = $("#posttype").val();
-        var poststreet = $("#poststreet").val();
-        var postcity = $("#postcity").val();
-        var poststate = $("#poststate").val();
-        var postzip = $("#postzip").val();
-        var postdate = $("#postdate").val();
-        var postdescription = $("#postdescription").val();
-        var posttime =$("#posttime").val();
+        var IncidentType = $("#posttype").val();
+        var address = $("#poststreet").val();
+        var city = $("#postcity").val();
+        var state = $("#poststate").val();
+        var zipCode = $("#postzip").val();
+        var IncidentDate = $("#postdate").val();
+        var IncidentTime = $("#postdescription").val();
+        var IncidentDescription = $("#posttime").val();
 
         postCrime({
-            IncidentType: posttype,
-            address: poststreet,
-            city: postcity,
-            state: poststate,
-            zipCode: postzip,
-            IncidentDate: postdate,
-            IncidentTime: posttime,
-            IncidentDescription: postdescription
+            IncidentType: IncidentType,
+            address: address,
+            city: city,
+            state: state,
+            zipCode: zipCode,
+            IncidentDate: IncidentDate,
+            IncidentTime: IncidentTime,
+            IncidentDescription: IncidentDescription
         })
 
     })
 
     function postCrime(postData){
         $.post("/api/posts", postData);
+        console.log("Crime Reported! You're a Local Hero");
         window.location.href = "/profile";
     }
 
