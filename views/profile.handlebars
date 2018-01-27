@@ -10,7 +10,7 @@
           <h3 class="card-title">My Profile</h3>
         </div>
         <div class="card-image">
-          <img src="images/team2.jpg">
+          <img src="./assets/images/team2.jpg">
         </div>
         <div class="card-content">
           <p>
@@ -33,7 +33,7 @@
 
             <!--SUBMIT BUTTON======================================================-->
       <button id="searchCrime" class="btn waves-effect waves-light blue-grey" type="submit" name="action">
-        Search An Area for Crime
+        Search Area for Crime
       </button>
 
     </section>
@@ -54,21 +54,21 @@
               </tr>
             </thead>
             <tr>
-              <td>Assault</td>
+              <td>Aggrevated Anger</td>
               <td>10694 Jones Rd</td>
               <td>Threw Computers out Window bc Project 2</td>
               <td>1/25/2018</td>
               <td>11:59 PM</td>
             </tr>
-            {{!-- {{#each post}}
+            {{#each post}}
             <tr>
-              <td>{{dataValues[0].IncidentType}}</td>
-              <td>{{address}}</td>
-              <td>{{date}}</td>
-              <td>{{description}}</td>
-              <td>{{time}}</td>
+              <td> {{IncidentType}} </td>
+              <td> {{address}}, {{city}}, {{state}} {{zipCode}}  </td>
+              <td> {{IncidentDescription}} </td>
+              <td> {{IncidentDate}} </td>
+              <td> {{IncidentTime}} </td>
             </tr>
-            {{/each}} --}}
+             {{/each}}
             </tbody>
           </table>
         </div>
@@ -81,7 +81,6 @@
 </div>
 
 </div>
-<<<<<<< HEAD
 </main>
 <!-- FOOTER SECTION =======-->
 <footer class="page-footer lime">
@@ -128,7 +127,4 @@
   </div>
 </footer>
 
-
 <script type="text/javascript" src="../assets/script/profile.js"></script>
-=======
->>>>>>> f76a11f9f52dd3e1d8bf2cf5bfeeda94f7dcf31f
