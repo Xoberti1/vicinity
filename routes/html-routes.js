@@ -34,6 +34,7 @@ module.exports = function (app) {
 			}).then(function(dbPost) {
 					dbPost.title = 'title';
 					res.render("profile", {post: dbPost.title});
+					console.log(dbPost.post.dataValues[0].IncidentType);
 			});
 		})
 	});
