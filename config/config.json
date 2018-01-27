@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": "surfer03",
+      "password": "root",
       "database": "vicinity_db",
       "host": "localhost",
       "dialect": "mysql"
