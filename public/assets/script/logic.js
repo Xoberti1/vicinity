@@ -68,4 +68,40 @@ $(document).ready(function() {
             $.post("/api/users", userData);
             window.location.href = "/";
         }
+
+        $("#reportCrime").on("click", function (event){
+            window.location.href = "/crimeform";
+        })
+
+        $("#crimeSubmit").on("click", function (event){
+            event.preventDefault();
+            
+            var incidentType = $("#crimeType").val();
+            var location = $("#location").val();
+            var incidentDate = $("#datepicker").val();
+            var crimeDescription = $("#icon_prefix2");
+
+            console.log(incidentType);
+            console.log(location);
+            console.log(incidentDate);
+            console.log(crimeDescription);
+
+        createPost({
+            incidentType: name,
+            location: username,
+            incidentDate: password,
+            crimeDescription: crimeDescription,
+            city: "Houston",
+            state: "Tx",
+            Address: "7523 Fake Place",
+            zipCode: "77084"
+        })
+
+    })
+
+    function createPost(postData) {
+        $.post("/api/posts", postData);
+        // window.location.href = "/";
+    }
+        })
 })
