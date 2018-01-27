@@ -43,4 +43,10 @@ module.exports = function (app) {
 			title: "title"
 		});
 	});
+
+	app.get("/maps", function(req, res){
+		res.render("maps",{
+			title: "title"
+		});
+	});
 };

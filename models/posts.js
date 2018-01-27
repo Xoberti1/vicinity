@@ -56,11 +56,11 @@ var Sequelize = require("sequelize");
     },
 
     lat: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.FLOAT,
     },
 
     long: {
-      type: Sequelize.INTEGER,
+      type: Sequelize.FLOAT,
     },
 
     upVote: {
