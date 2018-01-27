@@ -1,5 +1,4 @@
-// Server.js - This file is the initial starting point for the Node/Express server.
-// Not sure what all npm packages we will be using 
+// Server.js - This file is the initial starting point for the Node/Express server. 
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
