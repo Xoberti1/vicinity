@@ -22,7 +22,7 @@ module.exports = function (app) {
 		console.log(req.body);
 		db.User.create({
 			name: req.body.name,
-			streetAddress: req.body.streetAddress,
+			Address: req.body.Address,
 			city: req.body.city,
 			state: req.body.state,
 			zipCode: req.body.zipCode,
