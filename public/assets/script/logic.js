@@ -30,21 +30,6 @@ $(document).ready(function() {
                 }
             });
         }
-        // function getCrimes(){
-        //     $get("/api/posts")
-            
-        //     db.User.findAll({
-        //         where: {
-        //             password = req.body.password
-        //         }
-        //     }).then(function(req, res){
-        //         db.Post.findAll({
-        //             where: {
-        //                 zipCode = req.body.zipCode
-        //             }.then(function(dbPost) {
-        //                 res.json(dbPost);
-        //         })
-        //     })
 
     });
 
@@ -79,6 +64,5 @@ $(document).ready(function() {
             $.post("/api/users", userData);
             window.location.href = "/";
         }
-
 })
 
