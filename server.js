@@ -35,3 +35,21 @@ db.sequelize.sync({}).then(function() {
     console.log("App listening on PORT " + PORT);
   })
 });
+
+// app.listen(PORT, () => {
+//   console.log("Your server has started.")
+//   db.sequelize.sync({}).then(() => {
+//     console.log("Your database is online.");
+//     db.User.create(
+//       {
+//         name: "xavier oberti",
+//         username: "xoberti@gmail.com",
+//         password: "catinthehat",
+//         city: "harris county",
+//         state: "TX",
+//         Address: "11526 Moonmist Drive",
+//         zipCode: 77072,
+//       }
+//     )
+//   })
+// });

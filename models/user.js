@@ -5,12 +5,7 @@ var Sequelize = require("sequelize");
 // Creates a model that matches up with DB
 var User = {
 
-    firstName: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-
-    lastName: {
+    name: {
         type: Sequelize.STRING,
         allowNull: false
     },
