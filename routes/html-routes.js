@@ -15,29 +15,30 @@ module.exports = function (app) {
 		});
 	});
 
-	app.get("/profile", function(req, res){
-<<<<<<< HEAD
-		res.render("profile",{
-			title: "title"
-		});
-	});
-	// app.get("/profile", function (req, res) {
-	// 	db.User.findOne({
-	// 		where: {
-	// 			password: req.body.password
-	// 		}
-	// 	}).then(function (userData) {
-	// 		console.log("userdata: " + userData);
-	// 		db.Post.findAll({
-	// 			where: {
-	// 				zipCode: userData.zipCode
-	// 			}
-	// 		}).then(function (dbPost) {
-	// 			dbPost.title = 'title';
-	// 			res.render("profile", { post: dbPost.title });
-	// 		});
-	// 	})
+	// app.get("/profile", function(req, res){
+	// 	res.render("profile",{
+	// 		title: "title"
+	// 	});
 	// });
+	app.get("/profile", function (req, res) {
+		db.User.findOne({
+			where: {
+				// password: req.body.password
+				id: 1
+			}
+		}).then(function (userData) {
+			console.log("userdata: " + userData.zipCode);
+			db.Post.findAll({
+				where: {
+					zipCode: userData.zipCode
+				}
+			}).then(function (dbPost) {
+				dbPost.title = 'title';
+				res.render("profile", { post: dbPost.title });
+				console.log(dbPost.post);
+			});
+		})
+	});
 
 	app.get("/crimes", function(req, res){
 		res.render("crimes",{

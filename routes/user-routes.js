@@ -18,6 +18,14 @@ module.exports = function (app) {
 		});
 	});
 
+	app.get("/api/users/:zipCode", function (req, res) {
+		db.User.findAll({
+			where: zipCode,
+		}).then(function (dbUser) {
+			res.json(dbUser);
+		})
+	})
+
 	app.post("/api/users", function (req, res) {
 		console.log(req.body);
 		db.User.create({
