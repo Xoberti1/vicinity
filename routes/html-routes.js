@@ -11,11 +11,12 @@ module.exports = function (app) {
 
 	app.get("/", function(req, res){
 		res.render("index",{
-			title: "title"
+			title: "title",
 		});
 	});
 
 	app.get("/profile", function(req, res){
+<<<<<<< HEAD
 		res.render("profile",{
 			title: "title"
 		});
