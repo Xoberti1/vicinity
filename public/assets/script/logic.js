@@ -30,9 +30,6 @@ $(document).ready(function() {
                     if (guy.username === emailVal && guy.password === pass) {
                         window.location.href = "profile";
                         console.log("verification ran");
-                        // sessionStorage.setItem("zippy", guy.zipCode)
-                        // $(window).load(() => sessionStorage.getItem("zippy"))
-                        // console.log(guy.zipCode, "zippy")
                     }
                 }
             });
@@ -72,4 +69,3 @@ $(document).ready(function() {
             window.location.href = "/";
         }
 })
-
