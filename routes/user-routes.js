@@ -18,11 +18,19 @@ module.exports = function (app) {
 		});
 	});
 
+	app.get("/api/users/:zipCode", function (req, res) {
+		db.User.findAll({
+			where: zipCode,
+		}).then(function (dbUser) {
+			res.json(dbUser);
+		})
+	})
+
 	app.post("/api/users", function (req, res) {
 		console.log(req.body);
 		db.User.create({
 			name: req.body.name,
-			streetAddress: req.body.streetAddress,
+			Address: req.body.Address,
 			city: req.body.city,
 			state: req.body.state,
 			zipCode: req.body.zipCode,
