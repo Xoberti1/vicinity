@@ -1,21 +1,136 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="./assets/css/stylemap.css">
-    <script src="./assets/script/map.js"></script>
-    <title>Crime Map</title>
-    <style>
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vicinity Map</title>
+  <style>
+    #map{
+      height:400px;
+      width:100%;
+    }
+  </style>
 </head>
-
 <body>
-    <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-    <div id="map"></div>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM08Ddu6pmNsXZr6WC3eXCU6D2bhSJyPs&libraries=places&callback=initAutocomplete"
-        async defer></script>
-</body>
+  <!-- <h1>Vicinity Map</h1> -->
+  <div id="map"></div>
+  <script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom:9,
+        center:{lat:29.7604,lng:-95.3698} 
+      }
 
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Listen for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+      /*
+      // Add marker
+      var marker = new google.maps.Marker({
+        position:{lat:42.4668,lng:-70.9495},
+        map:map,
+        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+      });
+
+      var infoWindow = new google.maps.InfoWindow({
+        content:'<h1>Lynn MA</h1>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+      */
+
+      // Array of markers
+      var markers = [
+        {
+          coords:{lat:29.7604,lng:-95.3698},
+          // iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<p>Houston, TX</p>'
+        },
+        {
+          coords:{lat:29.8821,lng:-95.3643},
+          content:'<p>Sexual Assault,Sexual Assault Other (Child),1500 MOONEY RD,HARRIS COUNTY,TX</p>'
+        },
+        {
+          coords:{lat:29.8866,lng:-95.6701}, 
+          content:'<p>Breaking & Entering,Burglary of Habitation,17100 SHEFFIELD PINES LN,HARRIS COUNTY,TX</p>'
+        },
+        {
+          coords:{lat:30.0047,lng:-95.4807}, 
+          content:'<p>Theft from Vehicle,Burglary of Vehicle,3100 PEBBLE TRACE DR,HOUSTON,TX</p>'
+        },
+        {
+          coords:{lat:29.9696,lng:-95.5008}, 
+          content:'<p>Property Crime,Criminal Mischief,12000 MIGHTY OAK DR,HOUSTON,TX</p>'
+        },
+        {
+          coords:{lat:29.9266,lng:-95.5834}, 
+          content:'<p>Theft,Fraud,11000 CRESCENT MOON DR,HARRIS COUNTY,TX</p>'
+        },
+        {
+          coords:{lat:29.969,lng:-95.5369}, 
+          content:'<p>Assault,Simple Assault,13200 CHAMPIONS CENTRE DR,HARRIS COUNTY,TX</p>'
+        },
+        {
+          coords:{lat:29.9803,lng:-95.7172}, 
+          content:'<p>Theft of Vehicle,Stolen Vehicles,14100 MUESCHKE RD,CYPRESS,TX</p>'
+        },
+        {
+          coords:{lat:29.857,lng:-95.1348},
+          content:'<p>Theft,Theft - Grand and Larceny,16900 BLAIRWOOD DR,HARRIS COUNTY,TX</p>'
+        },
+        {
+          coords:{lat:29.7646,lng:-95.3572},
+          content:'<p>Assault,Simple Assault,700 N SAN JACINTO ST,HOUSTON,TX</p>'
+        }
+      ];
+
+      // Loop through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
+        });
+
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+
+    
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1BRGiB0NZEYIhsbhslEVHuPHihXYwv5Y&callback=initMap">
+    </script>
+</body>
 </html>
