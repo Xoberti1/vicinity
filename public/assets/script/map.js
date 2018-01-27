@@ -24,6 +24,28 @@ function initAutocomplete() {
     if (places.length == 0) {
       return;
     }
+//DROPPING MARKERS FROM SQL TABLE
+    //This function allows you to plug in coordinates and it'll generate a marker on the map
+	function addMarker(coords, restInfo) {
+		var marker = new google.maps.Marker({
+			position: coords,
+			map: map,
+			animation : google.maps.Animation.DROP
+		});
+
+		markers.push(marker);
+
+		var infowindow = new google.maps.InfoWindow({
+          content: restInfo
+        });
+
+		contentString.push(infowindow);
+
+    
+		marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+	}
 
     // Clear out the old markers.
     markers.forEach(function(marker) {

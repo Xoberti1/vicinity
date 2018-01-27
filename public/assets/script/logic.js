@@ -82,8 +82,4 @@ $(document).ready(function() {
             $.post("/api/users", userData);
             window.location.href = "/";
         }
-
-
-
 })
-
