@@ -1,12 +1,11 @@
-// Server.js - This file is the initial starting point for the Node/Express server.
-// Not sure what all npm packages we will be using 
+// Server.js - This file is the initial starting point for the Node/Express server. 
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 
 // Sets up the Express App
 var app = express();
-var PORT = process.env.PORT || 8090;
+var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");

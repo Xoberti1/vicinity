@@ -17,11 +17,6 @@ main {
     flex: 1 0 auto;
 }
 
-#loglogo {
-    width: 50%;
-    height: auto;
-}
-
 .mytable{
     background-color: white;
 }
@@ -130,6 +125,7 @@ i .votes{
         opacity: 0;
         transform: translateX(100px);
     }
+}
 
     100% {
         opacity: 1;
