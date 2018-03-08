@@ -19,7 +19,6 @@ module.exports = function (app) {
         // console.log(new Date())
         db.User.findOne({
             where: {
-                // password: req.body.password
                 id: 1
 			},
         }).then(function (userData) {
