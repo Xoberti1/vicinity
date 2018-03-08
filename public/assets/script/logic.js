@@ -18,21 +18,22 @@ $(document).ready(function() {
         event.preventDefault();
             var emailVal = email.val();
             var pass = password.val();
+            console.log(pass)
+            console.log(emailVal)
 
         $.get("/api/users", function(data) {
             getUsers()
         })
 
         function getUsers() {
+            console.log("you made it to getUser")
             $.get("/api/users", function (data) {
                 for (var i = 0; i < data.length; i++) {
                     guy = data[i];
-
+                    console.log(guy);
                     if (guy.username === emailVal && guy.password === pass) {
                         window.location.href = "profile";
-                        // sessionStorage.setItem("zippy", guy.zipCode)
-                        // $(window).load(() => sessionStorage.getItem("zippy"))
-                        // console.log(guy.zipCode, "zippy")
+                        console.log("verification ran");
                     }
                 }
             });
