@@ -68,39 +68,6 @@ $(document).ready(function() {
 
     })
 
-<<<<<<< HEAD
-        function createUser(userData){
-            $.post("/api/users", userData);
-            window.location.href = "/";
-        }
-
-        $("#reportCrime").on("click", function (event){
-            window.location.href = "/crimeform";
-        })
-
-        $("#crimeSubmit").on("click", function (event){
-            event.preventDefault();
-            
-            var incidentType = $("#crimeType").val();
-            var location = $("#location").val();
-            var incidentDate = $("#datepicker").val();
-            var crimeDescription = $("#icon_prefix2");
-
-            console.log(incidentType);
-            console.log(location);
-            console.log(incidentDate);
-            console.log(crimeDescription);
-
-        createPost({
-            incidentType: name,
-            location: username,
-            incidentDate: password,
-            crimeDescription: crimeDescription,
-            city: "Houston",
-            state: "Tx",
-            Address: "7523 Fake Place",
-            zipCode: "77084"
-=======
     function createUser(userData){
         $.post("/api/users", userData);
         window.location.href = "/";
@@ -127,19 +94,10 @@ $(document).ready(function() {
             IncidentDate: IncidentDate,
             IncidentTime: IncidentTime,
             IncidentDescription: IncidentDescription
->>>>>>> 00586e69c54de0589d7652423b0c246d02c631b6
         })
 
     })
 
-<<<<<<< HEAD
-    function createPost(postData) {
-        $.post("/api/posts", postData);
-        // window.location.href = "/";
-    }
-        })
-})
-=======
     function postCrime(postData){
         $.post("/api/posts", postData);
         console.log("Crime Reported! You're a Local Hero");
@@ -180,4 +138,3 @@ $(document).ready(function() {
     });
 
 })
->>>>>>> 00586e69c54de0589d7652423b0c246d02c631b6
